@@ -1,6 +1,15 @@
 
-#page-landing{
+#page-landing #container{
+    width: 100vw;
+    height: 100vh;
+}
+#page-landing  #container #header{
     background: var(--color-primary);
+
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 4rem;
+    margin-bottom: 3rem;
 }
 
 #page-landing #container{
@@ -18,6 +27,18 @@
 
 .logo-container h2{
     font-weight: 500;
+    font-size: 2.6rem;
+}
+
+.header_frase{
+    font-weight: 500;
+    font-size: 2.4rem;
+    font:  Poppins;
+    margin: 8rem 4rem;
+    color: var(--color-text-base);
+}
+
+.header_frase strong{
     font-size: 3.6rem;
 }
 
@@ -32,16 +53,15 @@
 }
 
 .buttons_container a {
-    width: 30rem;
-    height: 10.4rem;
+    width: 22rem;
+    height: 25.4rem;
     border-radius: 0.8rem;
     margin-right: 1.6rem;
 
-    font: 700 2.4rem Archivo;
+    font: 800 2.4rem Archivo;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 
     text-decoration: none;
 
@@ -50,8 +70,16 @@
     transition: background 0.2s;
 }
 .buttons_container a img{
-    width: 4rem;
-    margin-right: 2.4rem;
+    width: 6rem;
+    margin: 2.4rem;
+}
+
+.buttons_container a p{
+    width: 15rem;
+    margin-top: 4rem;
+    margin-left: 2.5rem;
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 .buttons_container a.study{
@@ -74,7 +102,8 @@
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-left: 10rem;
+    margin-top: 5rem;
 }
 .total_connection img{
   margin-left: 0.8rem;
@@ -88,15 +117,15 @@
 
 @media (min-width: 1100px){
     #page-landing #container{
-        max-width: 1100px;
+        max-width: 100vw;
+    }
+    #page-landing #container #header{
+        max-width: 100vw;
         display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: 350px 1fr;
+        grid-template-columns: 1100px(2fr 1fr 2fr);
+        grid-template-rows: 1fr;
         grid-template-areas: 
-        "proffy image image"
-        "button button texting";
-        column-gap: 87px;
-        row-gap: 86px;
+        "proffy image image";
     }
 
     .logo-container{
